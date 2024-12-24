@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Contacts_WF.Contact_Section.Update_Contact;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -10,15 +11,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Contacts_WF.Contact_Section.Update_Contact
+namespace Contacts_WF.Contact_Section.Delete_Contact
 {
-    public partial class Update_Main_Form : Form
+    public partial class Delete_Main_Form : Form
     {
-        public Update_Main_Form()
-        {
-            InitializeComponent();
-        }
-
         private static void LoadForm(Form form, Guna2Panel panel)
         {
             if ((panel.Controls.Count == 0) || (form.Text != panel.Controls[0].Text))
@@ -40,19 +36,24 @@ namespace Contacts_WF.Contact_Section.Update_Contact
             }
         }
 
-        internal static void LoadFindForm()
+        public Delete_Main_Form()
         {
-            LoadForm(new Find_Contact(), MainPanel);
+            InitializeComponent();
         }
 
-        private void Update_Main_Form_Load(object sender, EventArgs e)
+        internal static void LoadFindForm()
+        {
+            LoadForm(new Find_Contact(true), MainPanel);
+        }
+
+        private void Delete_Main_Form_Load(object sender, EventArgs e)
         {
             LoadFindForm();
         }
 
-        internal static void LoadUpdateForm(clsContact contact)
+        internal static void LoadDeleteForm(clsContact contact)
         {
-            LoadForm(new Save_Contact(contact), MainPanel);
+            LoadForm(new Delete_Contact(contact), MainPanel);
         }
     }
 }

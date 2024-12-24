@@ -9,14 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Contacts_WF.Contact_Section.Update_Contact;
+using Contacts_WF.Contact_Section.Delete_Contact;
 
 namespace Contacts_WF.Contact_Section.Update_Contact
 {
     public partial class Find_Contact : Form
     {
-        public Find_Contact()
+        bool IsDelete;
+
+        public Find_Contact(bool IsDelete = false)
         {
             InitializeComponent();
+
+            this.IsDelete = IsDelete;
+            if (IsDelete)
+                lblFind.Text = lblFind.Text.Replace("update", "delete");
         }
 
         void FindContact()
@@ -28,7 +35,10 @@ namespace Contacts_WF.Contact_Section.Update_Contact
                 if (clsContact.IsContactExist(ContactID))
                 {
                     clsContact contact = clsContact.Find(ContactID);
-                    Update_Main_Form.LoadUpdateForm(contact);
+                    if (IsDelete)
+                        Delete_Main_Form.LoadDeleteForm(contact);
+                    else
+                        Update_Main_Form.LoadUpdateForm(contact);
                 }
                 else
                     MessageBox.Show("Please enter existing contact ID.", "Contact Not Found",

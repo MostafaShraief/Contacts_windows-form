@@ -1,6 +1,6 @@
-﻿namespace Contacts_WF.Contact_Section.Update_Contact
+﻿namespace Contacts_WF.Contact_Section.Delete_Contact
 {
-    partial class Update_Main_Form
+    partial class Delete_Main_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -38,25 +38,25 @@
             MainPanel.Location = new System.Drawing.Point(0, 0);
             MainPanel.Name = "MainPanel";
             MainPanel.ShadowDecoration.Parent = MainPanel;
-            MainPanel.Size = new System.Drawing.Size(844, 639);
-            MainPanel.TabIndex = 0;
+            MainPanel.Size = new System.Drawing.Size(848, 639);
+            MainPanel.TabIndex = 2;
             // 
-            // Update_Main_Form
+            // Delete_Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(844, 639);
+            this.ClientSize = new System.Drawing.Size(848, 639);
             this.Controls.Add(MainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Update_Main_Form";
-            this.Text = "Update_Main_Form";
-            this.Load += new System.EventHandler(this.Update_Main_Form_Load);
+            this.Name = "Delete_Main_Form";
+            this.Text = "Delete_Main_Form";
+            this.Load += new System.EventHandler(this.Delete_Main_Form_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         static private Guna.UI2.WinForms.Guna2Panel MainPanel;
     }
 }

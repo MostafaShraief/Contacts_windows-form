@@ -185,6 +185,7 @@
             this.btnDeleteContact.Size = new System.Drawing.Size(230, 82);
             this.btnDeleteContact.TabIndex = 4;
             this.btnDeleteContact.Text = "Delete Contact";
+            this.btnDeleteContact.Click += new System.EventHandler(this.btnDeleteContact_Click);
             // 
             // tabPage2
             // 

@@ -30,7 +30,7 @@
         {
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblFind = new System.Windows.Forms.Label();
             this.btnFindContact = new Guna.UI2.WinForms.Guna2Button();
             this.tbContactID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 25;
-            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.lblFind);
             this.guna2Panel1.Controls.Add(this.btnFindContact);
             this.guna2Panel1.Controls.Add(this.tbContactID);
             this.guna2Panel1.Controls.Add(this.label1);
@@ -64,15 +64,15 @@
             this.guna2Panel1.Size = new System.Drawing.Size(804, 599);
             this.guna2Panel1.TabIndex = 6;
             // 
-            // label2
+            // lblFind
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.label2.Location = new System.Drawing.Point(157, 528);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(530, 31);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Find contact to update its own informations";
+            this.lblFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+            this.lblFind.Location = new System.Drawing.Point(157, 528);
+            this.lblFind.Name = "lblFind";
+            this.lblFind.Size = new System.Drawing.Size(530, 31);
+            this.lblFind.TabIndex = 21;
+            this.lblFind.Text = "Find contact to update its own informations";
+            this.lblFind.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnFindContact
             // 
@@ -147,6 +147,6 @@
         private Guna.UI2.WinForms.Guna2Button btnFindContact;
         private Guna.UI2.WinForms.Guna2TextBox tbContactID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblFind;
     }
 }

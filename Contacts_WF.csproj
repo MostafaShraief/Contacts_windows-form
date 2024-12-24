@@ -70,6 +70,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contact Section\Delete_Contact\Delete Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact Section\Delete_Contact\Delete Contact.Designer.cs">
+      <DependentUpon>Delete Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact Section\Delete_Contact\Delete Main Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact Section\Delete_Contact\Delete Main Form.Designer.cs">
+      <DependentUpon>Delete Main Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contact Section\Save Contact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Contact Section\Delete_Contact\Delete Contact.resx">
+      <DependentUpon>Delete Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contact Section\Delete_Contact\Delete Main Form.resx">
+      <DependentUpon>Delete Main Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contact Section\Save Contact.resx">
       <DependentUpon>Save Contact.cs</DependentUpon>
     </EmbeddedResource>

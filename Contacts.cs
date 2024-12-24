@@ -1,4 +1,5 @@
 ﻿using Contacts_WF.Contact_Section;
+using Contacts_WF.Contact_Section.Delete_Contact;
 using Contacts_WF.Contact_Section.Update_Contact;
 using Contacts_WF.Country_Section;
 using System;
@@ -64,6 +65,11 @@ namespace Contacts_WF
         private void btnUpdateContact_Click(object sender, EventArgs e)
         {
             LoadForm(new Update_Main_Form(), RightPanel);
+        }
+
+        private void btnDeleteContact_Click(object sender, EventArgs e)
+        {
+            LoadForm(new Delete_Main_Form(), RightPanel);
         }
     }
 }

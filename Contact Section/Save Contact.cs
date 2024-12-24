@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
+using Contacts_WF.Contact_Section.Update_Contact;
 
 namespace Contacts_WF.Contact_Section
 {
@@ -46,6 +47,8 @@ namespace Contacts_WF.Contact_Section
                 _Mode = enMode.Existing;
                 SwitchToUpdateForm();
             }
+            else
+                this.contact = new clsContact();
         }
 
         void LoadCountries()
@@ -104,8 +107,12 @@ namespace Contacts_WF.Contact_Section
 
                 IsSaved = contact.Save();
                 if (IsSaved)
+                {
                     MessageBox.Show($"Contact {Word}d successfuly.", $"{Word}d",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (_Mode == enMode.Existing)
+                        Update_Main_Form.LoadFindForm();
+                }
                 else
                     MessageBox.Show($"Failed to {Word} contact," +
                         " please check your data entered and try again.", "Failed",
