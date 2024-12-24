@@ -21,7 +21,7 @@ namespace Contacts_WF
             InitializeComponent();
         }
 
-        private void LoadForm(Form form, Panel panel)
+        static internal void LoadForm(Form form, Panel panel)
         {
             if ((panel.Controls.Count == 0) || (form.Text != panel.Controls[0].Text))
             {
@@ -62,7 +62,7 @@ namespace Contacts_WF
             LoadForm(new Show_Countries(), RightPanel);
         }
 
-        private void btnUpdateContact_Click(object sender, EventArgs e)
+        internal static void btnUpdateContact_Click(object sender = null, EventArgs e = null)
         {
             LoadForm(new Update_Main_Form(), RightPanel);
         }

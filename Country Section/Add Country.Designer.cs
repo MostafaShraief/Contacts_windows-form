@@ -30,13 +30,13 @@
         {
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.tbPhoneCode = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbCountryCode = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnAddCountry = new Guna.UI2.WinForms.Guna2Button();
             this.tbCountryName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbCountryCode = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbPhoneCode = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,72 @@
             this.guna2Panel1.Size = new System.Drawing.Size(804, 599);
             this.guna2Panel1.TabIndex = 6;
             // 
+            // tbPhoneCode
+            // 
+            this.tbPhoneCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPhoneCode.DefaultText = "";
+            this.tbPhoneCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbPhoneCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbPhoneCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPhoneCode.DisabledState.Parent = this.tbPhoneCode;
+            this.tbPhoneCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbPhoneCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPhoneCode.FocusedState.Parent = this.tbPhoneCode;
+            this.tbPhoneCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbPhoneCode.HoverState.Parent = this.tbPhoneCode;
+            this.tbPhoneCode.Location = new System.Drawing.Point(317, 356);
+            this.tbPhoneCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPhoneCode.Name = "tbPhoneCode";
+            this.tbPhoneCode.PasswordChar = '\0';
+            this.tbPhoneCode.PlaceholderText = "";
+            this.tbPhoneCode.SelectedText = "";
+            this.tbPhoneCode.ShadowDecoration.Parent = this.tbPhoneCode;
+            this.tbPhoneCode.Size = new System.Drawing.Size(211, 39);
+            this.tbPhoneCode.TabIndex = 24;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+            this.label3.Location = new System.Drawing.Point(313, 321);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 31);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Phone Code";
+            // 
+            // tbCountryCode
+            // 
+            this.tbCountryCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCountryCode.DefaultText = "";
+            this.tbCountryCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbCountryCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbCountryCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbCountryCode.DisabledState.Parent = this.tbCountryCode;
+            this.tbCountryCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbCountryCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbCountryCode.FocusedState.Parent = this.tbCountryCode;
+            this.tbCountryCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbCountryCode.HoverState.Parent = this.tbCountryCode;
+            this.tbCountryCode.Location = new System.Drawing.Point(317, 238);
+            this.tbCountryCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCountryCode.Name = "tbCountryCode";
+            this.tbCountryCode.PasswordChar = '\0';
+            this.tbCountryCode.PlaceholderText = "";
+            this.tbCountryCode.SelectedText = "";
+            this.tbCountryCode.ShadowDecoration.Parent = this.tbCountryCode;
+            this.tbCountryCode.Size = new System.Drawing.Size(211, 39);
+            this.tbCountryCode.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
+            this.label2.Location = new System.Drawing.Point(313, 203);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(182, 31);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Country Code";
+            // 
             // btnAddCountry
             // 
             this.btnAddCountry.CheckedState.Parent = this.btnAddCountry;
@@ -101,7 +167,6 @@
             this.tbCountryName.HoverState.Parent = this.tbCountryName;
             this.tbCountryName.Location = new System.Drawing.Point(317, 120);
             this.tbCountryName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbCountryName.MaxLength = 50;
             this.tbCountryName.Name = "tbCountryName";
             this.tbCountryName.PasswordChar = '\0';
             this.tbCountryName.PlaceholderText = "";
@@ -120,82 +185,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Country Name";
             // 
-            // tbCountryCode
-            // 
-            this.tbCountryCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCountryCode.DefaultText = "";
-            this.tbCountryCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbCountryCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbCountryCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCountryCode.DisabledState.Parent = this.tbCountryCode;
-            this.tbCountryCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCountryCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCountryCode.FocusedState.Parent = this.tbCountryCode;
-            this.tbCountryCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCountryCode.HoverState.Parent = this.tbCountryCode;
-            this.tbCountryCode.Location = new System.Drawing.Point(317, 238);
-            this.tbCountryCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbCountryCode.MaxLength = 3;
-            this.tbCountryCode.Name = "tbCountryCode";
-            this.tbCountryCode.PasswordChar = '\0';
-            this.tbCountryCode.PlaceholderText = "";
-            this.tbCountryCode.SelectedText = "";
-            this.tbCountryCode.ShadowDecoration.Parent = this.tbCountryCode;
-            this.tbCountryCode.Size = new System.Drawing.Size(211, 39);
-            this.tbCountryCode.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.label2.Location = new System.Drawing.Point(313, 203);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 31);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Country Code";
-            // 
-            // tbPhoneCode
-            // 
-            this.tbPhoneCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPhoneCode.DefaultText = "";
-            this.tbPhoneCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbPhoneCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbPhoneCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPhoneCode.DisabledState.Parent = this.tbPhoneCode;
-            this.tbPhoneCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPhoneCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPhoneCode.FocusedState.Parent = this.tbPhoneCode;
-            this.tbPhoneCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPhoneCode.HoverState.Parent = this.tbPhoneCode;
-            this.tbPhoneCode.Location = new System.Drawing.Point(317, 356);
-            this.tbPhoneCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tbPhoneCode.MaxLength = 3;
-            this.tbPhoneCode.Name = "tbPhoneCode";
-            this.tbPhoneCode.PasswordChar = '\0';
-            this.tbPhoneCode.PlaceholderText = "";
-            this.tbPhoneCode.SelectedText = "";
-            this.tbPhoneCode.ShadowDecoration.Parent = this.tbPhoneCode;
-            this.tbPhoneCode.Size = new System.Drawing.Size(211, 39);
-            this.tbPhoneCode.TabIndex = 24;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.8F);
-            this.label3.Location = new System.Drawing.Point(313, 321);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 31);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Phone Code";
-            // 
-            // AddCountry_cs
+            // Add_Country
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(844, 639);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddCountry_cs";
+            this.Name = "Add_Country";
             this.Text = "AddCountry_cs";
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);

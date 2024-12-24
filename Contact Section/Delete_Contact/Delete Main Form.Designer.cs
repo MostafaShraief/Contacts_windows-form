@@ -45,6 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(848, 639);
             this.Controls.Add(MainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

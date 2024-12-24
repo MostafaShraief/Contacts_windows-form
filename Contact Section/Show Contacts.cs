@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
+using Contacts_WF.Contact_Section.Update_Contact;
 
 namespace Contacts_WF.Contact_Section
 {
@@ -107,6 +108,73 @@ namespace Contacts_WF.Contact_Section
                 Reset();
                 ListView.Focus();
             }
+        }
+
+        void _EditContact()
+        {
+            int ContactID;
+
+            if (int.TryParse(ListView.SelectedItems[0].Text, out ContactID))
+            {
+                clsContact contact = clsContact.Find(ContactID);
+
+                if (contact != null)
+                {
+                    Contacts.btnUpdateContact_Click();
+                    Update_Main_Form.LoadUpdateForm(contact);
+                }
+                else
+                {
+                    MessageBox.Show("Contact has no longer exist", "Contact Not Found",
+                        MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Reset();
+                }
+            }
+            else
+                MessageBox.Show("Seems an error occured while catching data", "Opps!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _EditContact();
+        }
+
+        void _DeleteContact()
+        {
+            int ContactID;
+
+            if (int.TryParse(ListView.SelectedItems[0].Text, out ContactID))
+            {
+                clsContact contact = clsContact.Find(ContactID);
+
+                string Word = "delete";
+
+                DialogResult result = MessageBox.Show($"Are you sure you want to {Word} this contact?", $"Cofirm {Word}",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button2);
+
+                if (result == DialogResult.OK)
+                {
+                    if (clsContact.DeleteContact(contact.ContactID))
+                        MessageBox.Show($"Contact {Word}d successfuly.", $"{Word}d",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show($"Failed to {Word} contact," +
+                            " please check your data entered and try again.", "Failed",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+                MessageBox.Show("Seems an error occured while catching data", "Opps!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            Reset();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _DeleteContact();
         }
     }
 }

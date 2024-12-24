@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -46,6 +47,9 @@
             this.DateOfBirth = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CountryID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ImagePath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmsContactRow = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -53,6 +57,7 @@
             this.splitContainer1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.cmsContactRow.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -180,7 +185,9 @@
             this.DateOfBirth,
             this.CountryID,
             this.ImagePath});
+            this.ListView.ContextMenuStrip = this.cmsContactRow;
             this.ListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListView.FullRowSelect = true;
             this.ListView.GridLines = true;
             this.ListView.HideSelection = false;
             this.ListView.Location = new System.Drawing.Point(0, 0);
@@ -233,6 +240,29 @@
             this.ImagePath.Text = "Image Path";
             this.ImagePath.Width = 88;
             // 
+            // cmsContactRow
+            // 
+            this.cmsContactRow.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsContactRow.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.cmsContactRow.Name = "cmsContactRow";
+            this.cmsContactRow.Size = new System.Drawing.Size(211, 76);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // Show_Contacts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,6 +282,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            this.cmsContactRow.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -275,5 +306,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnReset;
+        private System.Windows.Forms.ContextMenuStrip cmsContactRow;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

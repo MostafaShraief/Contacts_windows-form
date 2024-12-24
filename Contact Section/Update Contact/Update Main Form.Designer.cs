@@ -57,6 +57,6 @@
         }
 
         #endregion
-        static private Guna.UI2.WinForms.Guna2Panel MainPanel;
+        static internal Guna.UI2.WinForms.Guna2Panel MainPanel;
     }
 }

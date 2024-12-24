@@ -44,7 +44,7 @@
             this.btnAddCountry = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdateCountry = new Guna.UI2.WinForms.Guna2Button();
             this.btnDeleteCountry = new Guna.UI2.WinForms.Guna2Button();
-            this.RightPanel = new Guna.UI2.WinForms.Guna2Panel();
+            RightPanel = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
@@ -75,7 +75,7 @@
             // 
             // splitContainer.Panel2
             // 
-            this.splitContainer.Panel2.Controls.Add(this.RightPanel);
+            this.splitContainer.Panel2.Controls.Add(RightPanel);
             this.splitContainer.Size = new System.Drawing.Size(1095, 639);
             this.splitContainer.SplitterDistance = 246;
             this.splitContainer.SplitterWidth = 1;
@@ -169,7 +169,7 @@
             this.btnUpdateContact.Size = new System.Drawing.Size(230, 82);
             this.btnUpdateContact.TabIndex = 3;
             this.btnUpdateContact.Text = "Update Contact";
-            this.btnUpdateContact.Click += new System.EventHandler(this.btnUpdateContact_Click);
+            this.btnUpdateContact.Click += new System.EventHandler(btnUpdateContact_Click);
             // 
             // btnDeleteContact
             // 
@@ -274,12 +274,12 @@
             // 
             // RightPanel
             // 
-            this.RightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RightPanel.Location = new System.Drawing.Point(0, 0);
-            this.RightPanel.Name = "RightPanel";
-            this.RightPanel.ShadowDecoration.Parent = this.RightPanel;
-            this.RightPanel.Size = new System.Drawing.Size(848, 639);
-            this.RightPanel.TabIndex = 0;
+            RightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            RightPanel.Location = new System.Drawing.Point(0, 0);
+            RightPanel.Name = "RightPanel";
+            RightPanel.ShadowDecoration.Parent = RightPanel;
+            RightPanel.Size = new System.Drawing.Size(848, 639);
+            RightPanel.TabIndex = 0;
             // 
             // Contacts
             // 
@@ -289,7 +289,7 @@
             this.Controls.Add(this.splitContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Contacts";
-            this.Text = "Form1";
+            this.Text = "Contacts";
             this.splitContainer.Panel1.ResumeLayout(false);
             this.splitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
@@ -320,7 +320,7 @@
         private Guna.UI2.WinForms.Guna2Button btnAddCountry;
         private Guna.UI2.WinForms.Guna2Button btnUpdateCountry;
         private Guna.UI2.WinForms.Guna2Button btnDeleteCountry;
-        private Guna.UI2.WinForms.Guna2Panel RightPanel;
+        static private Guna.UI2.WinForms.Guna2Panel RightPanel;
     }
 }
 
