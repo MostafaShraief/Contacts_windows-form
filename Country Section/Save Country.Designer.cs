@@ -1,6 +1,6 @@
 ﻿namespace Contacts_WF.Country_Section
 {
-    partial class Add_Country
+    partial class Save_Country
     {
         /// <summary>
         /// Required designer variable.

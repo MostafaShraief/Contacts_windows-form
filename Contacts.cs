@@ -1,6 +1,6 @@
-﻿using Contacts_WF.Contact_Section;
+﻿using BusinessLayer;
+using Contacts_WF.Contact_Section;
 using Contacts_WF.Contact_Section.Delete_Contact;
-using Contacts_WF.Contact_Section.Update_Contact;
 using Contacts_WF.Country_Section;
 using System;
 using System.Collections.Generic;
@@ -54,7 +54,7 @@ namespace Contacts_WF
 
         private void btnAddCountry_Click(object sender, EventArgs e)
         {
-            LoadForm(new Add_Country(), RightPanel);
+            LoadForm(new Save_Country(), RightPanel);
         }
 
         private void btnShowCountries_Click(object sender, EventArgs e)
@@ -62,14 +62,53 @@ namespace Contacts_WF
             LoadForm(new Show_Countries(), RightPanel);
         }
 
+        internal static void LoadFindForm(bool IsDelete = false, bool IsCountry = false)
+        {
+            LoadForm(new Find(IsDelete, IsCountry), RightPanel);
+        }
+
         internal static void btnUpdateContact_Click(object sender = null, EventArgs e = null)
         {
-            LoadForm(new Update_Main_Form(), RightPanel);
+            LoadFindForm();
         }
 
         private void btnDeleteContact_Click(object sender, EventArgs e)
         {
             LoadForm(new Delete_Main_Form(), RightPanel);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnUpdateCountry_Click(object sender, EventArgs e)
+        {
+            LoadFindForm(false, true);
+        }
+
+        internal static void LoadUpdateContactForm(clsContact contact)
+        {
+            LoadForm(new Save_Contact(contact), RightPanel);
+        }
+
+        internal static void LoadUpdateCountryForm(clsCountry country)
+        {
+            LoadForm(new Save_Country(country), RightPanel);
+        }
+
+        internal static void LoadDeleteCountryForm(clsCountry country)
+        {
+            LoadForm(new Delete_Country(country), RightPanel);
+        }
+        private void btnDeleteCountry_Click(object sender, EventArgs e)
+        {
+            LoadFindForm(true, true);
         }
     }
 }

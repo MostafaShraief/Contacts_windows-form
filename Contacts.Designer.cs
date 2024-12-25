@@ -45,6 +45,10 @@
             this.btnUpdateCountry = new Guna.UI2.WinForms.Guna2Button();
             this.btnDeleteCountry = new Guna.UI2.WinForms.Guna2Button();
             RightPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.RibbonPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.dragcontrol = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
@@ -54,6 +58,7 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.RibbonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Elipse
@@ -64,9 +69,9 @@
             // splitContainer
             // 
             this.splitContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.splitContainer.IsSplitterFixed = true;
-            this.splitContainer.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer.Location = new System.Drawing.Point(0, 35);
             this.splitContainer.Name = "splitContainer";
             // 
             // splitContainer.Panel1
@@ -256,6 +261,7 @@
             this.btnUpdateCountry.Size = new System.Drawing.Size(230, 82);
             this.btnUpdateCountry.TabIndex = 3;
             this.btnUpdateCountry.Text = "Update Country";
+            this.btnUpdateCountry.Click += new System.EventHandler(this.btnUpdateCountry_Click);
             // 
             // btnDeleteCountry
             // 
@@ -271,6 +277,7 @@
             this.btnDeleteCountry.Size = new System.Drawing.Size(230, 82);
             this.btnDeleteCountry.TabIndex = 4;
             this.btnDeleteCountry.Text = "Delete Country";
+            this.btnDeleteCountry.Click += this.btnDeleteCountry_Click;
             // 
             // RightPanel
             // 
@@ -281,11 +288,60 @@
             RightPanel.Size = new System.Drawing.Size(848, 639);
             RightPanel.TabIndex = 0;
             // 
+            // RibbonPanel
+            // 
+            this.RibbonPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.RibbonPanel.Controls.Add(this.guna2Button2);
+            this.RibbonPanel.Controls.Add(this.guna2Button1);
+            this.RibbonPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.RibbonPanel.Location = new System.Drawing.Point(0, 0);
+            this.RibbonPanel.Name = "RibbonPanel";
+            this.RibbonPanel.ShadowDecoration.Parent = this.RibbonPanel;
+            this.RibbonPanel.Size = new System.Drawing.Size(1095, 35);
+            this.RibbonPanel.TabIndex = 1;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Black", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(989, 0);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(51, 35);
+            this.guna2Button2.TabIndex = 1;
+            this.guna2Button2.Text = "-";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Location = new System.Drawing.Point(1041, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(51, 35);
+            this.guna2Button1.TabIndex = 0;
+            this.guna2Button1.Text = "X";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // dragcontrol
+            // 
+            this.dragcontrol.TargetControl = this.RibbonPanel;
+            // 
             // Contacts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 639);
+            this.ClientSize = new System.Drawing.Size(1095, 674);
+            this.Controls.Add(this.RibbonPanel);
             this.Controls.Add(this.splitContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Contacts";
@@ -299,6 +355,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.RibbonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -320,7 +377,11 @@
         private Guna.UI2.WinForms.Guna2Button btnAddCountry;
         private Guna.UI2.WinForms.Guna2Button btnUpdateCountry;
         private Guna.UI2.WinForms.Guna2Button btnDeleteCountry;
-        static private Guna.UI2.WinForms.Guna2Panel RightPanel;
+        private Guna.UI2.WinForms.Guna2GradientPanel RibbonPanel;
+        private Guna.UI2.WinForms.Guna2DragControl dragcontrol;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private static Guna.UI2.WinForms.Guna2Panel RightPanel;
     }
 }
 

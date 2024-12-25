@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
-using Contacts_WF.Contact_Section.Update_Contact;
+using Contacts_WF.Contact_Section;
 
 namespace Contacts_WF.Contact_Section
 {
@@ -114,15 +114,12 @@ namespace Contacts_WF.Contact_Section
         {
             int ContactID;
 
-            if (int.TryParse(ListView.SelectedItems[0].Text, out ContactID))
+            if (ListView.SelectedItems.Count > 0 && int.TryParse(ListView.SelectedItems[0].Text, out ContactID))
             {
                 clsContact contact = clsContact.Find(ContactID);
 
                 if (contact != null)
-                {
-                    Contacts.btnUpdateContact_Click();
-                    Update_Main_Form.LoadUpdateForm(contact);
-                }
+                    Contacts.LoadUpdateContactForm(contact);
                 else
                 {
                     MessageBox.Show("Contact has no longer exist", "Contact Not Found",
@@ -144,7 +141,7 @@ namespace Contacts_WF.Contact_Section
         {
             int ContactID;
 
-            if (int.TryParse(ListView.SelectedItems[0].Text, out ContactID))
+            if (ListView.SelectedItems.Count > 0 && int.TryParse(ListView.SelectedItems[0].Text, out ContactID))
             {
                 clsContact contact = clsContact.Find(ContactID);
 

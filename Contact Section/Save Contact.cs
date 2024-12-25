@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
-using Contacts_WF.Contact_Section.Update_Contact;
+using Contacts_WF.Contact_Section;
 
 namespace Contacts_WF.Contact_Section
 {
@@ -111,7 +111,7 @@ namespace Contacts_WF.Contact_Section
                     MessageBox.Show($"Contact {Word}d successfuly.", $"{Word}d",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (_Mode == enMode.Existing)
-                        Update_Main_Form.LoadFindForm();
+                        Contacts.LoadFindForm();
                 }
                 else
                     MessageBox.Show($"Failed to {Word} contact," +

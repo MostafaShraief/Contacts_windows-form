@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ListView = new System.Windows.Forms.ListView();
             this.CountryID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CountryName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,6 +44,9 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.textboxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cmsRows = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deletteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -50,6 +54,7 @@
             this.splitContainer1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
+            this.cmsRows.SuspendLayout();
             this.SuspendLayout();
             // 
             // ListView
@@ -60,8 +65,10 @@
             this.CountryName,
             this.CountryCode,
             this.PhoneCode});
+            this.ListView.ContextMenuStrip = this.cmsRows;
             this.ListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.8F);
+            this.ListView.FullRowSelect = true;
             this.ListView.GridLines = true;
             this.ListView.HideSelection = false;
             this.ListView.Location = new System.Drawing.Point(0, 0);
@@ -230,7 +237,6 @@
             this.textboxSearch.HoverState.Parent = this.textboxSearch;
             this.textboxSearch.Location = new System.Drawing.Point(184, 9);
             this.textboxSearch.Margin = new System.Windows.Forms.Padding(9);
-            this.textboxSearch.MaxLength = 50;
             this.textboxSearch.Name = "textboxSearch";
             this.textboxSearch.PasswordChar = '\0';
             this.textboxSearch.PlaceholderText = "";
@@ -251,6 +257,29 @@
             this.guna2Panel1.Size = new System.Drawing.Size(844, 639);
             this.guna2Panel1.TabIndex = 1;
             // 
+            // cmsRows
+            // 
+            this.cmsRows.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsRows.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.deletteToolStripMenuItem});
+            this.cmsRows.Name = "cmsRows";
+            this.cmsRows.Size = new System.Drawing.Size(119, 48);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deletteToolStripMenuItem
+            // 
+            this.deletteToolStripMenuItem.Name = "deletteToolStripMenuItem";
+            this.deletteToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.deletteToolStripMenuItem.Text = "Delete";
+            this.deletteToolStripMenuItem.Click += new System.EventHandler(this.deletteToolStripMenuItem_Click);
+            // 
             // Show_Countries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -269,6 +298,7 @@
             this.splitContainer1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
+            this.cmsRows.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -289,5 +319,8 @@
         private Guna.UI2.WinForms.Guna2CheckBox cbName;
         private Guna.UI2.WinForms.Guna2CheckBox cbID;
         private Guna.UI2.WinForms.Guna2TextBox textboxSearch;
+        private System.Windows.Forms.ContextMenuStrip cmsRows;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deletteToolStripMenuItem;
     }
 }

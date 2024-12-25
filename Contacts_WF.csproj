@@ -82,6 +82,12 @@
     <Compile Include="Contact Section\Delete_Contact\Delete Main Form.Designer.cs">
       <DependentUpon>Delete Main Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contact Section\Find.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact Section\Find.Designer.cs">
+      <DependentUpon>Find.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contact Section\Save Contact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,29 +100,23 @@
     <Compile Include="Contact Section\Show Contacts.Designer.cs">
       <DependentUpon>Show Contacts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contact Section\Update Contact\Find Contact.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Contact Section\Update Contact\Find Contact.Designer.cs">
-      <DependentUpon>Find Contact.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Contact Section\Update Contact\Update Main Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Contact Section\Update Contact\Update Main Form.Designer.cs">
-      <DependentUpon>Update Main Form.cs</DependentUpon>
-    </Compile>
     <Compile Include="Contacts.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Contacts.Designer.cs">
       <DependentUpon>Contacts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Country Section\Add Country.cs">
+    <Compile Include="Country Section\Delete Country.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Country Section\Add Country.Designer.cs">
-      <DependentUpon>Add Country.cs</DependentUpon>
+    <Compile Include="Country Section\Delete Country.Designer.cs">
+      <DependentUpon>Delete Country.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Country Section\Save Country.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Country Section\Save Country.Designer.cs">
+      <DependentUpon>Save Country.cs</DependentUpon>
     </Compile>
     <Compile Include="Country Section\Show Countries.cs">
       <SubType>Form</SubType>
@@ -132,23 +132,23 @@
     <EmbeddedResource Include="Contact Section\Delete_Contact\Delete Main Form.resx">
       <DependentUpon>Delete Main Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contact Section\Find.resx">
+      <DependentUpon>Find.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contact Section\Save Contact.resx">
       <DependentUpon>Save Contact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contact Section\Show Contacts.resx">
       <DependentUpon>Show Contacts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Contact Section\Update Contact\Find Contact.resx">
-      <DependentUpon>Find Contact.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Contact Section\Update Contact\Update Main Form.resx">
-      <DependentUpon>Update Main Form.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Contacts.resx">
       <DependentUpon>Contacts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Country Section\Add Country.resx">
-      <DependentUpon>Add Country.cs</DependentUpon>
+    <EmbeddedResource Include="Country Section\Delete Country.resx">
+      <DependentUpon>Delete Country.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Country Section\Save Country.resx">
+      <DependentUpon>Save Country.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Country Section\Show Countries.resx">
       <DependentUpon>Show Countries.cs</DependentUpon>

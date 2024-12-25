@@ -157,5 +157,69 @@ namespace Contacts_WF.Country_Section
         {
             Reset();
         }
+
+        void _EditCountry()
+        {
+            int CountryID;
+
+            if (ListView.SelectedItems.Count > 0 && int.TryParse(ListView.SelectedItems[0].Text, out CountryID))
+            {
+                clsCountry country = clsCountry.Find(CountryID);
+
+                if (country != null)
+                    Contacts.LoadUpdateCountryForm(country);
+                else
+                {
+                    MessageBox.Show("Country has no longer exist", "Country Not Found",
+                        MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    Reset();
+                }
+            }
+            else
+                MessageBox.Show("Seems an error occured while catching data", "Opps!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _EditCountry();
+        }
+
+        void _DeleteCountry()
+        {
+            int CountryID;
+
+            if (ListView.SelectedItems.Count > 0 && int.TryParse(ListView.SelectedItems[0].Text, out CountryID))
+            {
+                clsCountry Country = clsCountry.Find(CountryID);
+
+                string Word = "delete";
+
+                DialogResult result = MessageBox.Show($"Are you sure you want to {Word} this country?", $"Cofirm {Word}",
+                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question,
+                    MessageBoxDefaultButton.Button2);
+
+                if (result == DialogResult.OK)
+                {
+                    if (clsCountry.DeleteCountry(Country.CountryID))
+                        MessageBox.Show($"Country {Word}d successfuly.", $"{Word}d",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show($"Failed to {Word} country," +
+                            " please check your data entered and try again.", "Failed",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+                MessageBox.Show("Seems an error occured while catching data", "Opps!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            Reset();
+        }
+
+        private void deletteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _DeleteCountry();
+        }
     }
 }

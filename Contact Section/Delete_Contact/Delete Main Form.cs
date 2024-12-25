@@ -1,5 +1,5 @@
 ﻿using BusinessLayer;
-using Contacts_WF.Contact_Section.Update_Contact;
+using Contacts_WF.Contact_Section;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -43,7 +43,7 @@ namespace Contacts_WF.Contact_Section.Delete_Contact
 
         internal static void LoadFindForm()
         {
-            LoadForm(new Find_Contact(true), MainPanel);
+            LoadForm(new Find(true), MainPanel);
         }
 
         private void Delete_Main_Form_Load(object sender, EventArgs e)
